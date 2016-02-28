@@ -60,7 +60,7 @@ var TodoApp = React.createClass({
             <div>
                 <AddTodo />
                 <TodoList list={this.filterTodos()}/>
-                <TodoFilter onClick={this.handleFilter} />
+                <TodoFilter />
             </div>
         );
     }
