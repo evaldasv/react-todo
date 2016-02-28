@@ -1,0 +1,28 @@
+{
+  "name": "todo-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "evaldasv",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "browserify": "^13.0.0",
+    "express": "^4.13.4",
+    "flux": "^2.1.1",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-webserver": "^0.9.1",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.5.1",
+    "mongoose": "^4.4.4",
+    "object-assign": "^4.0.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "reactify": "^1.1.1",
+    "superagent": "^1.7.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "webserver": "^1.1.2"
+  }
+}
