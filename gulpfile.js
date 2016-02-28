@@ -6,7 +6,7 @@ var buffer = require('vinyl-buffer');
 var source = require('vinyl-source-stream');
 var webserver = require('gulp-webserver');
 
-gulp.task('run', function(cb) {
+gulp.task('default', function() {
     nodemon({
         script: './api/server.js',
         ext: 'js',
