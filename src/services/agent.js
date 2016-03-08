@@ -2,7 +2,7 @@
 
 var request = require('superagent');
 
-function post(url, data, callback) {
+var post = function post(url, data, callback) {
     request
         .post(url)
         .send(JSON.stringify(data))
@@ -14,12 +14,12 @@ function post(url, data, callback) {
         		callback(res.body);
         	}
         });
-}
+};
 
-function get(url, callback) {
+var get = function get(url, callback) {
     request
         .get(url)
-        .set('Accept', 'application/json')
+        .set('Content-Type', 'application/json; charset=utf-8')
         .end(function (err, res) {
         	if (err) {
         		callback(err);
@@ -27,9 +27,9 @@ function get(url, callback) {
         		callback(res.body);
         	}
         });
-}
+};
 
-function patch(url, data, callback) {
+var patch = function patch(url, data, callback) {
     request
         .patch(url)
         .send(JSON.stringify(data))
@@ -41,10 +41,23 @@ function patch(url, data, callback) {
         		callback(res.body);
         	}
         });
+};
+
+var remove = function remove(url, callback) {
+    request
+        .delete(url)
+        .end(function(err, res) {
+            if (err) {
+                callback(err);
+            } else if (res) {
+                callback(res.body);
+            }
+        });
 }
 
 module.exports = {
 	get: get,
 	post: post,
-	patch: patch
+	patch: patch,
+    remove: remove
 };

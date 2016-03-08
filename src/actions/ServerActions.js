@@ -21,6 +21,12 @@ var ServerActions = {
             type: TodoConstants.TODO_TOGGLE_RESPONSE,
             data: data
         });
+    },
+    remove: function(data) {
+        AppDispatcher.handleServerAction({
+            type: TodoConstants.TODO_REMOVE_RESPONSE,
+            data: data
+        });
     }
 };
 module.exports = ServerActions;

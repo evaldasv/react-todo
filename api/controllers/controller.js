@@ -56,7 +56,7 @@ var controller = function controller(Todo) {
             if (err) {
                 res.status(500).send(err);
             } else {
-                res.status(204).send('Todo removed');
+                res.json(req.todo);
             }
         });
     };

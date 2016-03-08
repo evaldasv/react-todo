@@ -1,0 +1,25 @@
+#todoapp {
+    padding: 2em;
+}
+.filters a {
+	padding: .5em;
+}
+a:visited {
+    color: black;
+}
+.pure-button {
+    margin-left: .5em;
+}
+.todo-item a:hover {
+    background: #E5E5E5;
+}
+
+.todo-item button {
+    border: none;
+    background: #E5E5E5;
+    margin-left: 1em;
+}
+
+ul {
+    width: 300px;
+}

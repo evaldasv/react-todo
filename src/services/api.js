@@ -23,8 +23,15 @@ var toggle = function(id, completed) {
     });
 }
 
+var remove = function(id) {
+    agent.remove(API_URL + '/' + id, function(res) {
+        ServerActions.remove(res);
+    });
+}
+
 module.exports = {
     create: create,
     getAll: getAll,
-    toggle: toggle
+    toggle: toggle,
+    remove: remove
 };

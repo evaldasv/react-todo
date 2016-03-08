@@ -61,6 +61,15 @@ AppDispatcher.register(function(payload) {
             TodoStore.emitChange();
         break;
 
+        case TodoConstants.TODO_REMOVE_RESPONSE:
+            _todos.forEach(function(todo, index) {
+                if (data._id === todo._id) {
+                    delete _todos[index];
+                } 
+            });
+            TodoStore.emitChange();
+        break;
+
         case TodoConstants.TODO_FILTER:
             _filter = action.data;
             TodoStore.emitChange();

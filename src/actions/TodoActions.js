@@ -30,6 +30,13 @@ var TodoActions = {
             type: TodoConstants.TODO_FILTER,
             data: filter 
         });
+    },
+    removeTodo: function(id) {
+        AppDispatcher.handleViewAction({
+            type: TodoConstants.TODO_REMOVE_REQUEST,
+            data: id
+        });
+        APIService.remove(id);
     }
 };
 module.exports = TodoActions;
