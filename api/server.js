@@ -27,7 +27,8 @@ var todoRouter = express.Router();
 
 todoRouter.route('/')
     .get(controller.get)
-    .post(controller.post);
+    .post(controller.post)
+;
 
 todoRouter.use('/:todoId', function(req, res, next) {
     Todo.findById(req.params.todoId, function(err, todo) {
@@ -47,7 +48,9 @@ todoRouter.route('/:todoId')
         res.json(req.todo);
     })
     .put(controller.put)
-    .patch(controller.patch);
+    .patch(controller.patch)
+    .delete(controller.remove)
+;
 
 app.use('/api/todos', todoRouter);
 

@@ -51,11 +51,22 @@ var controller = function controller(Todo) {
         });
     };
 
+    var remove = function remove(req, res) {
+        req.todo.remove(function(err) {
+            if (err) {
+                res.status(500).send(err);
+            } else {
+                res.status(204).send('Todo removed');
+            }
+        });
+    };
+
     return {
         get: get,
         post: post,
         patch: patch,
-        put: put
+        put: put,
+        remove: remove
     };
 }
 
