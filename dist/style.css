@@ -1,25 +1,40 @@
 #todoapp {
     padding: 2em;
 }
+li {
+    line-height: 2em;
+}
 .filters a {
 	padding: .5em;
-}
-a:visited {
-    color: black;
 }
 .pure-button {
     margin-left: .5em;
 }
-.todo-item a:hover {
-    background: #E5E5E5;
+.todo-item span {
+    padding-top: .5em;
+    padding-bottom: .5em;
 }
-
+.todo-item span:hover {
+    background: #E5E5E5;
+    cursor: pointer;
+}
 .todo-item button {
     border: none;
-    background: #E5E5E5;
+    display: none;
+    background: none;
+    outline: none;
+    padding: 0;
     margin-left: 1em;
+    font-weight: bold;
 }
-
+.todo-item button.hover {
+    display: inline-block;
+    padding-right: .5em;
+    color: grey;
+}
+.todo-item button:hover {
+    color: black;
+}
 ul {
     width: 300px;
 }
